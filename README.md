@@ -31,4 +31,6 @@ Saturday: Finish routing and have dream creating page in place, with at least a 
 Sunday: Try to get photos and audio uploading - but this could take a while!
 
 
-## To be continued...
+## Component map
+
+https://user-images.githubusercontent.com/16737313/33132458-b889323e-cf67-11e7-94a5-c97c4fbe79be.png
