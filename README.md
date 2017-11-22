@@ -33,4 +33,4 @@ Sunday: Try to get photos and audio uploading - but this could take a while!
 
 ## Component map
 
-https://user-images.githubusercontent.com/16737313/33132458-b889323e-cf67-11e7-94a5-c97c4fbe79be.png
+![screen shot 2017-11-21 at 2 08 23 pm](https://user-images.githubusercontent.com/16737313/33132777-941a6714-cf68-11e7-8628-556ea042a30b.png)
