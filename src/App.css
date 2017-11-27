@@ -6,6 +6,26 @@
   width: 400px;
   padding-bottom: 180px;
   border-width: 0px;
-  border: none;
+  border: black 1px solid;
   outline: none;
+}
+
+.dream-name-input {
+  border: black 1px solid;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
 }
