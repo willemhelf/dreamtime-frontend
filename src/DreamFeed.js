@@ -1,6 +1,7 @@
 import React from 'react';
 import MainDreamList from './MainDreamList'
 import DreamShow from './DreamShow'
+import { Route } from 'react-router-dom';
 
 class DreamFeed extends React.Component {
 

@@ -4,7 +4,7 @@ const MainDreamList = (props) => {
 
 	return(
 		<div>
-		<p>{props.dream.name}</p>
+		<h4>{props.dream.name}</h4>
 		<p>{props.dream.content} </p>
 		<br />
 		</div>
