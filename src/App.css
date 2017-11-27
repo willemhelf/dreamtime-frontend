@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-size: 18px;
 }
 
 .dream-text-input {
@@ -15,6 +16,14 @@
   outline: none;
 }
 
+.nav-bar {
+  font-weight: bold;
+}
+
+.header {
+  color: blue;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -28,4 +37,9 @@ a:active {
 a:visited {
   color: black;
   text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  text-decoration: underline;
 }

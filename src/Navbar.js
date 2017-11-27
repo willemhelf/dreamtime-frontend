@@ -8,11 +8,12 @@ class Navbar extends React.Component {
 
 	render() {
 		return(
-			<div>
+			<div className="nav-bar">
 			<NavLink to="/">Home</NavLink>
 			<br />
 			<NavLink to="/new">New</NavLink>
-
+			<br />
+			<br />
 			</div>
 		)
 	}
