@@ -17,9 +17,9 @@ class MainDreamList extends React.Component {
 
 
 	render() {
+		
 		return(
 			<div>
-
 			<NavLink to={`/dreams/${this.state.id}`}>{this.state.name}</NavLink>
 			<p>{this.state.content} </p>
 			<br />
