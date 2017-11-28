@@ -7,18 +7,20 @@ class DreamShow extends React.Component {
 		this.state = {
 			id: this.props.match.params.id,
 			name: "",
-			content: ""
+			content: "",
+			redirect: false
 		}
 	}
 
-	deleteDream = (e) => {
-		e.preventDefault()
-		
+	deleteDream = () => {
+		return fetch(`http://localhost:3001/dreams/${this.state.id}`, {
+			method: "DELETE"
+		}).then(res => console.log(res))
 	}	
 
 	componentDidMount() {
 		const id = this.props.match.params.id
-		fetch(`http://localhost:3001/dreams/${id}`)
+		fetch(`http://localhost:3001/dreams/${this.state.id}`)
 			.then(res => res.json())
 			.then(json => this.setState({
 				id: id,
