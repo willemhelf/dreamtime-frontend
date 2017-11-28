@@ -22,7 +22,7 @@ class DreamFeed extends React.Component {
 
 	render() {
 		return(
-			<div>
+			<div className="dream-list-container">
 			{this.state.dreams.map((dream, id) => {
 				return <MainDreamList dream={dream} key={id} />
 			})}

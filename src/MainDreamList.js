@@ -7,11 +7,7 @@ class MainDreamList extends React.Component {
 	constructor(props) {
 		super(props)
 
-		this.state = ({
-			id: this.props.dream.id,
-			name: this.props.dream.name,
-			content: this.props.dream.content
-		})
+		
 	}
 
 
@@ -19,10 +15,9 @@ class MainDreamList extends React.Component {
 	render() {
 		
 		return(
-			<div>
-			<NavLink to={`/dreams/${this.state.id}`}>{this.state.name}</NavLink>
-			<p>{this.state.content} </p>
-			<br />
+			<div className="dream-container">
+			<NavLink to={`/dreams/${this.props.dream.id}`} className="dream-link">{this.props.dream.name}</NavLink>
+			<p>{this.props.dream.content} </p>
 			</div>
 		)
 	}

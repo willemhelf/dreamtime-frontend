@@ -27,6 +27,14 @@
   padding-bottom: 20px;
 }
 
+.dream-container {
+  padding-top: 24px;
+}
+
+.dream-link{
+  font-weight: bold
+}
+
 a {
   color: black;
   text-decoration: none;
