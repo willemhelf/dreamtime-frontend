@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, Redirect } from 'react-router'
 
 class NewDream extends React.Component {
 	constructor(props) {
@@ -6,9 +7,17 @@ class NewDream extends React.Component {
 
 		this.state = {
 			content: "",
-			name: ""
+			name: "",
+			redirect: false
 		}
 	}
+
+	handleSubmitAndRedirect = (e) => {
+		this.makePostRequest()
+		this.setState({
+			redirect: true
+		})
+	} 
 
 	handleNameChange = (e) => {
 		e.preventDefault();
@@ -37,12 +46,17 @@ class NewDream extends React.Component {
 				name: this.state.name,
 				content: this.state.content
 			})
-		}).then((res) => {
-			console.log(res)
 		})
 	}
 
 	render() {
+
+		if (this.state.redirect === true) {
+			return (
+				<Redirect from to="/" />
+			)
+		} else  {
+
 		return(
 			<div className="new-dream">
 			<h3>New dream</h3>
@@ -50,10 +64,12 @@ class NewDream extends React.Component {
 				<textarea placeholder="Describe your dream here..." name="dream" className="dream-text-input" onChange={this.handleContentChange}>
 				</textarea>
 				<br />
-				<input type="submit" value="Send it off" onClick={this.makePostRequest}/>
+				<input type="submit" value="Send it off" onClick={this.handleSubmitAndRedirect} />
 			</div>
 		)
 	}
+	
+}
 
 }
 

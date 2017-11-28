@@ -11,6 +11,10 @@ class DreamShow extends React.Component {
 		}
 	}
 
+	deleteDream = (e) => {
+		e.preventDefault()
+		
+	}	
 
 	componentDidMount() {
 		const id = this.props.match.params.id
@@ -29,6 +33,7 @@ class DreamShow extends React.Component {
 			<div>
 				<h4>{this.state.name}</h4>
 				<p>{this.state.content}</p>
+				<button onClick={this.deleteDream}>Delete this dream</button>
 			</div>
 		)
 	}
