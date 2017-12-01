@@ -6,17 +6,17 @@ class NewDream extends React.Component {
 		super(props)
 
 		this.state = {
-			content: "",
-			name: "",
+			content: "(Empty dream)",
+			name: "(Empty dream)",
 			redirect: false
 		}
 	}
 
 	handleSubmitAndRedirect = (e) => {
 		this.makePostRequest()
-		this.setState({
-			redirect: true
-		})
+		setTimeout(this.setState({
+					redirect: true
+				}), 1000)
 	} 
 
 	handleNameChange = (e) => {
@@ -53,7 +53,7 @@ class NewDream extends React.Component {
 
 		if (this.state.redirect === true) {
 			return (
-				<Redirect from to="/" />
+				<Redirect from="/new" to="/" />
 			)
 		} else  {
 
