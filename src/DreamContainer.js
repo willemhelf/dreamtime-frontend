@@ -13,7 +13,7 @@ class DreamFeed extends React.Component {
 			dreams: [],
 			redirect: false,
 			name: "",
-			content: "",
+			content: "", 
 			id: null
 		}
 	}

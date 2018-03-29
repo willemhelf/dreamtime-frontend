@@ -6,7 +6,7 @@ class DreamShow extends React.Component {
 		super(props)
 		this.state = {
 			id: this.props.match.params.id,
-			dreams: []
+			redirect: false
 		}
 	}
 
@@ -20,19 +20,31 @@ class DreamShow extends React.Component {
 			}))
 	}
 
+  deleteAndRedirect = () => {
+		console.log("deleting")
+	    return fetch(`http://localhost:3001/dreams/${this.state.id}`, {
+	      method: "DELETE",
+	      headers: {
+	      	Accept: "application/json",
+	      	'Content-type': 'application/json'
+	      }
+	    }).then(res => res.json())
+	    		this.setState({
+	    			redirect: true
+	    		})
+	}
+
 
 	render() {
 
 
-
-		console.log(this.props)
-
-		if (this.props.redirect === true) {
+		if (this.state.redirect === true) {
 			return (
 				<Redirect to="/" />
 			)
+			console.log(this.state)
 		} else  {
-		
+
 			return(
 				<div>
 					<h4>{this.state.name}</h4>
