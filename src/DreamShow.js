@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router'
+import { withRouter } from 'react-router-dom'
 
 class DreamShow extends React.Component {
 	constructor(props) {
@@ -28,10 +29,12 @@ class DreamShow extends React.Component {
 	      	Accept: "application/json",
 	      	'Content-type': 'application/json'
 	      }
-	    }).then(res => res.json())
-	    		this.setState({
-	    			redirect: true
-	    		})
+	    }).then(res => this.props.history.push('/'))
+	    		
+	}
+
+	editDream = () => {
+		console.log("to be continued...")
 	}
 
 
@@ -50,6 +53,7 @@ class DreamShow extends React.Component {
 					<h4>{this.state.name}</h4>
 					<p>{this.state.content}</p>
 					<button onClick={this.deleteAndRedirect}>Delete this dream</button>
+					<button onClick={this.editDream}>Edit this dream</button>
 				</div>
 			)
 		}
@@ -57,4 +61,4 @@ class DreamShow extends React.Component {
 
 }
 
-export default DreamShow
+export default withRouter(DreamShow) 
