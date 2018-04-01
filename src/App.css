@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   font-size: 18px;
+  font-family: "Courier";
+  font-style: "light"
 }
 
 .dream-text-input {
@@ -9,11 +11,13 @@
   border-width: 0px;
   border: black 1px solid;
   outline: none;
+  font-family: "Courier"
 }
 
 .dream-name-input {
   border: black 1px solid;
   outline: none;
+  font-family: "Courier"
 }
 
 .nav-bar {
@@ -21,7 +25,6 @@
 }
 
 .header {
-  color: blue;
   margin: 0;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -51,6 +54,6 @@ a:visited {
 }
 
 a:hover {
-  color: yellow;
+  color: gray;
   text-decoration: underline;
 }

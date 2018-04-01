@@ -9,9 +9,9 @@ class Navbar extends React.Component {
 	render() {
 		return(
 			<div className="nav-bar">
-			<NavLink to="/">Home</NavLink>
+			<NavLink to="/">HOME</NavLink>
 			<br />
-			<NavLink to="/new">New</NavLink>
+			<NavLink to="/new">NEW</NavLink>
 			<br />
 			<br />
 			</div>
