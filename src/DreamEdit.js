@@ -1,7 +1,5 @@
 import React from "react";
-import { Route, Redirect } from 'react-router'
-import DreamShow from './DreamShow'
-import { withRouter, NavLink } from 'react-router-dom'
+import DreamShow from "./DreamShow"
 
 class DreamEdit extends React.Component {
 	constructor(props) {
@@ -9,15 +7,16 @@ class DreamEdit extends React.Component {
 	}
 
 
+	consoleLogger = () => {
+		console.log(this.props)
+	}
 
 	render() {
-
-	
-
 		return(
-			<div></div>
+			<div onClick={this.consoleLogger}>hi</div>
 		)
 	}
+
 }
 
 export default DreamEdit

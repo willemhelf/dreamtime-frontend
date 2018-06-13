@@ -2,6 +2,8 @@ import React from 'react'
 import { Route, Redirect } from 'react-router'
 import { withRouter, NavLink } from 'react-router-dom'
 import DreamEdit from "./DreamEdit"
+import Popup from "reactjs-popup";
+
 
 class DreamShow extends React.Component {
 	constructor(props) {
@@ -33,10 +35,6 @@ class DreamShow extends React.Component {
 	    		
 	}
 
-	editDream = () => {
-		console.log("editing");
-
-	}
 
 
 	render() {
@@ -45,7 +43,7 @@ class DreamShow extends React.Component {
 				<div>
 					<h4>{this.state.name}</h4>
 					<p>{this.state.content}</p>
-					<NavLink to={"/edit"}><button><p>Edit</p></button></NavLink>
+					<NavLink to={`/edit/${this.state.id}`}><button>Edit</button></NavLink>
 					<br /><br />
 					<button onClick={this.deleteAndRedirect}>Delete this dream</button><br />
 					<br /> <br />
