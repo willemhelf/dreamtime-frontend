@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router'
-import { withRouter } from 'react-router-dom'
+import { withRouter, NavLink } from 'react-router-dom'
+import DreamEdit from "./DreamEdit"
 
 class DreamShow extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			id: this.props.match.params.id,
-			redirect: false
+			id: this.props.match.params.id
 		}
 	}
 
@@ -34,29 +34,24 @@ class DreamShow extends React.Component {
 	}
 
 	editDream = () => {
-		console.log("to be continued...")
+		console.log("editing");
+
 	}
 
 
 	render() {
 
-
-		if (this.state.redirect === true) {
-			return (
-				<Redirect to="/" />
-			)
-			console.log(this.state)
-		} else  {
-
 			return(
 				<div>
 					<h4>{this.state.name}</h4>
 					<p>{this.state.content}</p>
-					<button onClick={this.deleteAndRedirect}>Delete this dream</button>
-					<button onClick={this.editDream}>Edit this dream</button>
+					<NavLink to={"/edit"}><button><p>Edit</p></button></NavLink>
+					<br /><br />
+					<button onClick={this.deleteAndRedirect}>Delete this dream</button><br />
+					<br /> <br />
+					<NavLink to={"/"}> ← Back</NavLink>
 				</div>
 			)
-		}
 	}
 
 }

@@ -11,7 +11,6 @@ class DreamFeed extends React.Component {
 
 		this.state = {
 			dreams: [],
-			redirect: false,
 			name: "",
 			content: "", 
 			id: null

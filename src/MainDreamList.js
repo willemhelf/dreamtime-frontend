@@ -1,5 +1,6 @@
 import React from 'react'
 import DreamShow from './DreamShow'
+import DreamEdit from "./DreamEdit"
 import { BrowserRouter, NavLink } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 
