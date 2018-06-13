@@ -23,21 +23,6 @@ class MainDreamList extends React.Component {
 			})) 
 	}
 
-	deleteAndRedirect = () => {
-		console.log("deleting")
-	    return fetch(`http://localhost:3001/dreams/${this.state.id}`, {
-	      method: "DELETE",
-	      headers: {
-	      	Accept: "application/json",
-	      	'Content-type': 'application/json'
-	      }
-	    }).then(res => res.json())
-	    .then(this.setState({
-	      redirect: true,
-	      dreams: this.state.dreams.slice(-1)
-	    }))
-	}
-
 
 	render() {
 
