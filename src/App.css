@@ -24,6 +24,14 @@
   font-weight: bold;
 }
 
+#modal {
+  background-color: #ffffff;
+  width: 500px;
+  height: 500px;
+  color: blue;
+  border: blue 1px solid;
+}
+
 .header {
   margin: 0;
   padding-top: 10px;
